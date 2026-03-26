@@ -6,7 +6,7 @@
 ---
 
 ## Benchmarks
-In benchmarks ([benchmark.cpp](benchmark)) involving **50,000 double-precision floating-point numbers**, Staircase Sort consistently crushes the industry-standard `std::sort` (Introsort) and `std::stable_sort` (Timsort/MergeSort derivative).
+In benchmarks ([benchmark.cpp](benchmark.cpp)) involving **50,000 double-precision floating-point numbers**, Staircase Sort consistently crushes the industry-standard `std::sort` (Introsort) and `std::stable_sort` (Timsort/MergeSort derivative).
 
 | Algorithm | Average Time (50k elements) | Performance Gain |
 | :--- | :--- | :--- |
