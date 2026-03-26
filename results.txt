@@ -1,20 +1,32 @@
 ===========================================================
 BENCHMARK: STAIRCASE SORT vs STANDARD ALGORITHMS
-Data size: 1000000 | Iterations: 10 per sort
+Data size: 50000 | Iterations: 10 per sort
 ===========================================================
 Algorithm           AVG            MIN            MAX            
 -----------------------------------------------------------
 
-[Random]
-Staircase Sort      89.6058        86.7680        97.7824         ms
-std::sort           378.1804       372.3857       389.9212        ms
-std::stable_sort    451.9830       440.0725       474.5220        ms
+[DISTRIBUZIONE: CASUALE]
+Staircase Sort      1.4825         1.3924         1.8442          ms
+std::sort           3.0442         3.0041         3.1010          ms
+std::stable_sort    3.6096         3.5657         3.7201          ms
 
-[Ordered]
-Staircase Sort      65.8564        65.1232        68.3761         ms
-std::sort           206.7456       204.5013       211.8885        ms
+[DISTRIBUZIONE: GIA' ORDINATI]
+Staircase Sort      1.3180         1.2919         1.4141          ms
+std::sort           0.3932         0.3728         0.4560          ms
 
-[Reverse]
-Staircase Sort      73.2434        71.1000        75.6298         ms
-std::sort           160.1011       158.3608       167.1768        ms
+[DISTRIBUZIONE: REVERSE]
+Staircase Sort      1.1967         1.1529         1.3307          ms
+std::sort           0.3127         0.2789         0.3803          ms
 ===========================================================
+
+[Narrow Range - Many Collisions]
+Staircase Sort      1.5398         1.5032         1.6336          ms
+std::sort           3.0490         3.0158         3.1262          ms
+
+[Gaussian Distribution]
+Staircase Sort      1.5522         1.5082         1.7161          ms
+std::sort           3.0780         3.0320         3.1707          ms
+
+[Mostly Equal Values]
+Staircase Sort      1141.0445      1125.2580      1159.1872       ms <- SDENG!
+std::sort           0.3792         0.3590         0.4384          ms
